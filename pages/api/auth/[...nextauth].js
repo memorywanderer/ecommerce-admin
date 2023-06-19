@@ -11,7 +11,7 @@ export default NextAuth({
         password: { label: "password", type: "password" },
       },
       authorize: async (credentials, req) => {
-        const response = await axios.post("http://localhost:3001/api/signin", credentials, {
+        const response = await axios.post("/api/signin", credentials, {
           headers: {
             Cookie: req.headers.cookie
           }
