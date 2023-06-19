@@ -11,7 +11,7 @@ export default NextAuth({
         password: { label: "password", type: "password" },
       },
       authorize: async (credentials, req) => {
-        const response = await axios.post("/api/signin", credentials, {
+        const response = await axios.post("https://ecommerce-admin-silk.vercel.app/api/signin", credentials, {
           headers: {
             Cookie: req.headers.cookie
           }
