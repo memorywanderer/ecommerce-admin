@@ -1,26 +1,45 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
-    color-scheme: dark;
+    font-family: "Roboto", system-ui, sans-serif;
   }
+
   body {
-    color: white;
-    background: black;
+    @apply bg-secondary-light;
+  }
+
+}
+
+@layer components {
+  .btn-primary {
+    @apply flex items-center justify-center w-full max-w-fit text-sm font-bold bg-secondary-dark text-primary-light px-2 py-2 rounded-lg hover:bg-secondary-darker;
+  }
+  .btn-danger-primary {
+    @apply flex w-full max-w-fit font-bold bg-danger text-primary-light px-2 py-2 rounded-lg hover:bg-danger-dark;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+@media (max-width: 640px) {
+  .table-container {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  table {
+    min-width: 100%;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
