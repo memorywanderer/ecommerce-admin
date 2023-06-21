@@ -48,6 +48,10 @@ const Login = () => {
   return (
     <div className="max-w-md w-full shadow p-3 m-2 rounded-lg bg-primary-light">
       <h1 className='text-2xl font-bold mb-2'>Login to Bookyard</h1>
+      <div className='border-2 border-primary-dark'>
+        <p className='text-xl font-bold mb-2'>Email: den@me.com </p>
+        <p className='text-xl font-bold mb-2'>Password: 1234 </p>
+      </div>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -96,36 +100,7 @@ const Login = () => {
         }}
 
       </Formik>
-      {/* <form className="">
-          <div className="flex flex-col gap-1 mb-5">
-            <label htmlFor="email">Email</label>
-            <input
-              className='p-2 border border-primary-dark rounded-md'
-              name="email"
-              type="email"
-              placeholder="email@email.com"
-              value={loginData.email}
-              onChange={inputOnChange}
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-1 mb-5">
-            <label htmlFor="password">Password</label>
-            <input
-              className='p-2 border border-primary-dark  rounded-md'
-              name="password"
-              type="password"
-              placeholder="password"
-              value={loginData.password}
-              onChange={inputOnChange}
-              required
-            />
-          </div>
-          <button onClick={onSubmit} className="w-full font-bold bg-primary-dark  text-primary-light px-2 py-2 rounded-lg" type="submit">Log in</button>
-        </form> */}
-
     </div>
-
   )
 }
 
