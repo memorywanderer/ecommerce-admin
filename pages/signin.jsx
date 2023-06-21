@@ -48,9 +48,9 @@ const Login = () => {
   return (
     <div className="max-w-md w-full shadow p-3 m-2 rounded-lg bg-primary-light">
       <h1 className='text-2xl font-bold mb-2'>Login to Bookyard</h1>
-      <div className='border-2 border-primary-dark'>
-        <p className='text-xl font-bold mb-2'>Email: den@me.com </p>
-        <p className='text-xl font-bold mb-2'>Password: 1234 </p>
+      <div className='border-2 p-2 rounded border-primary-dark'>
+        <p className='text-xl mb-2'>Email: den@me.com </p>
+        <p className='text-xl mb-2'>Password: 1234 </p>
       </div>
       <Formik
         initialValues={initialValues}
